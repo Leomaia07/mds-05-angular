@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './property-binding.component.scss'
 })
 export class PropertyBindingComponent {
-  isDisable = true
+  isDisable = false
 }
