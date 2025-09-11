@@ -1,5 +1,4 @@
-<div class="container row">
-
+<div class=" mx-5 container row">
     <div class="col">
         <label class="form-label " for="nome"> Nome: </label><br>
         <input [(ngModel)]="pessoa.nome" class="form-control" type="text" name="nome" id="nome">
@@ -20,17 +19,16 @@
 
         </div>
 
-        <div class="">
-            <label class="form-label" for="endereco"> Endereço: </label><br>
-            <input [(ngModel)]="pessoa.endereco" class="form-control" type="text" name="endereco" id="endereco">
-
-
-
-            {{pessoa.nome}} {{pessoa.sobrenome}} <br>
-            {{pessoa.telefone}} <br>
-            {{pessoa.endereco}} <br>
-        </div>
-
+        
     </div>
+    
+    <div class="col-6">
+        <label class="form-label" for="endereco"> Endereço: </label><br>
+        <input [(ngModel)]="pessoa.endereco" class="form-control" type="text" name="endereco" id="endereco">
 
+
+        {{pessoa.nome}} {{pessoa.sobrenome}} <br>
+        {{pessoa.telefone}} <br>
+        {{pessoa.endereco}} <br>
+    </div>
 </div>

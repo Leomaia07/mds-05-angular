@@ -1,14 +1,47 @@
-<router-outlet></router-outlet>
-<hr>
-<app-hello-world></app-hello-world>
-<hr>
-<app-interpolation></app-interpolation>
-<hr>
-<app-property-binding></app-property-binding>
-<hr>
-<app-eventi-binding></app-eventi-binding>
-<hr>
-<app-two-way-data-binding></app-two-way-data-binding>
-<hr>
-<app-template-driven></app-template-driven>
-<hr>
+
+  <mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer mode="over">
+      <dl>
+          <dt routerLink="">Home</dt>
+          <dt>Data binding</dt>
+          <dd routerLink="interpolation">interpolation</dd>
+          <dd routerLink="proprety-binding">proprety-binding</dd>
+          <dd routerLink="event-binding">event-binding</dd>
+          <dd routerLink="two-way-data-binding">two-way-data-binding</dd>
+
+          <dt>Forms</dt>
+          <dd routerLink="template-driven">template-driven</dd>
+
+          <dt>Angular</dt>
+          <dd routerLink="button">button</dd>
+          <dd routerLink="form-field">form-field</dd>
+          <dd routerLink="expansion-panel">expansion-panel</dd>
+          <dd routerLink="dialog">dialog</dd>
+      </dl>
+    </mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar>
+        <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+
+
+
+
+
