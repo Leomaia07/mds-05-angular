@@ -15,6 +15,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -25,7 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
     // FormFieldComponent,
     // ExpansionPanelComponent,
     RouterLink,
-    RouterOutlet,RouterModule,
+    RouterOutlet, RouterModule,
     MatSidenavModule,
     MatFormFieldModule,
     MatSelectModule,
@@ -33,6 +36,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatListModule,
+    MatInputModule,
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -40,4 +46,17 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class AppComponent {
   title = 'hello-word';
+
+  tarefa: string = '';
+
+  listaDeTarefas: Array<string> = [];
+
+  public addTarefa() {
+    this.listaDeTarefas.push(this.tarefa);
+    this.tarefa = '';
+  }
+
+
 }
+
+
