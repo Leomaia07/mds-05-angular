@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import {TodoListComponent} from './todo-list/todo-list.component';
 
 
 
@@ -27,8 +28,7 @@ import {FormsModule} from '@angular/forms';
     // ButtonComponent,
     // FormFieldComponent,
     // ExpansionPanelComponent,
-    RouterLink,
-    RouterOutlet, RouterModule,
+    RouterModule,
     MatSidenavModule,
     MatFormFieldModule,
     MatSelectModule,

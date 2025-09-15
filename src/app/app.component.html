@@ -16,6 +16,7 @@
       <dd routerLink="form-field">form-field</dd>
       <dd routerLink="expansion-panel">expansion-panel</dd>
       <dd routerLink="dialog">dialog</dd>
+      <dd routerLink="todo-list">Todo-list</dd>
     </dl>
   </mat-drawer>
   <mat-drawer-content>
@@ -34,29 +35,7 @@
       </button>
     </mat-toolbar>
 
-    <section class="section d-flex flex-column justify-content-center align-items-center">
 
-      <div class="d-flex gap-2 ">
-        <mat-form-field class="example-full-width  ">
-          <mat-label>Digite a Tarefa</mat-label>
-          <input matInput (keydown.enter)="addTarefa()" [(ngModel)]="tarefa" placeholder="Ex.Tarefa 1" value="">
-        </mat-form-field>
-
-        @if (tarefa) {
-          <button mat-fab extended (click)="addTarefa()">Botão</button>
-        }
-
-      </div>
-
-      <mat-list role="list">
-        @for (item of listaDeTarefas; track item) {
-          <mat-list-item role="listitem">{{ item }}</mat-list-item>
-          <mat-divider></mat-divider>
-        }
-      </mat-list>
-
-
-    </section>
 
 
     <router-outlet></router-outlet>
