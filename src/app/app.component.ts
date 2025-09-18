@@ -30,15 +30,11 @@ import {TodoListComponent} from './todo-list/todo-list.component';
     // ExpansionPanelComponent,
     RouterModule,
     MatSidenavModule,
-    MatFormFieldModule,
-    MatSelectModule,
     MatButtonModule,
     MatToolbarModule,
-    MatButtonModule,
     MatIconModule,
-    MatListModule,
-    MatInputModule,
-    FormsModule,
+
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

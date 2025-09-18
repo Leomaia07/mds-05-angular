@@ -7,11 +7,13 @@ import {MatList, MatListItem} from '@angular/material/list';
 import {MatIcon} from '@angular/material/icon';
 import {TaskService} from '../services/task.service';
 import {TaskModel} from '../models/Task-model';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-todo-list',
   imports: [
     FormsModule,
+    RouterModule,
     MatDivider,
     MatFabButton,
     MatFormField,
@@ -35,10 +37,10 @@ export class TodoListComponent implements  OnInit {
   }
 
   public getTarefas(): void {
-    this.taskService.getTasks().subscribe((response ) => {
+    this.taskService.getTasks().subscribe((response) => {
       this.listaDeTarefas = response;
-    })
-};
+    });
+}
 
 
   tarefa: string = '';
@@ -56,7 +58,7 @@ export class TodoListComponent implements  OnInit {
     this.taskService.createTask(tarefa).subscribe((response) => {
       this.getTarefas();
       this.tarefa = ''
-    })
+    });
   }
 
 
